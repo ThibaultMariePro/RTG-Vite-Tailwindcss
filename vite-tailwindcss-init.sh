@@ -11,7 +11,7 @@ ENDTAG='\033[0m';
 printf '%b\n'       " ╔═══════════════════════════════╗";
 printf '%b\n'       " ║   Vite vanilla - Tailwindcss  ║";
 printf '%b\n'       " ╚═══════════════════════════════╝";
-printf '%b\n\b'     "$PURPLE This tool will create a clean vanilla boilerplate \n Vite 7.x.x + Tailwindcss 4.x.x project. $ENDTAG";
+printf '%b\n\b'     "$PURPLE$BOLD This tool will create a clean vanilla boilerplate \n Vite 7.x.x + Tailwindcss 4.x.x project. $ENDTAG";
 printf '%b'         "\n Project name [my-project]: "
 
 read INPUT
@@ -21,7 +21,7 @@ then
 else 
     INPUT="my-project"
 fi
-printf '%b\n\b'     "\n$PURPLE Setting up Vite project: $INPUT $ENDTAG";
+printf '%b\n\b'     "\n$PURPLE$BOLD Setting up Vite project: $INPUT $ENDTAG";
 
 printf '%b\n'         "   - Creating directory.."
 
@@ -41,7 +41,7 @@ printf '%b\n\b'         "   - Installing Tailwindcss.."
 
 npm install tailwindcss @tailwindcss/vite --prefix $INPUT/ > /dev/null 2>&1
 
-printf '%b\n\b'     "$PURPLE Cleaning project from demo files.. $ENDTAG";
+printf '%b\n\b'     "$PURPLE$BOLD Cleaning project from demo files.. $ENDTAG";
 printf '%b\n\b'         "   - Removing unecessary files.."
 rm $INPUT/public/vite.svg
 rm $INPUT/src/counter.js
@@ -67,6 +67,6 @@ export default defineConfig({
 
 
 printf '%b\n\b'     "\n$GREEN$BOLD ═══════════ SUCCESS! ═══════════ $ENDTAG";
-printf '%b\n\b'     " Everything should work, \n Now you can$BLUE cd$ENDTAG in $INPUT/ and run$BLUE$BOLD npm run dev $ENDTAG\n";
+printf '%b\n\b'     " Everything should work, \n Now you can$BLUE$BOLD cd$ENDTAG in $INPUT/ and run$BLUE$BOLD npm run dev $ENDTAG\n";
 
 exit 0
