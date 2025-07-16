@@ -1,7 +1,7 @@
 # RTG-Vite-Tailwindcss
 
 ## What
-Ready To Go Vite-Tailwindcss is a bash script to quickly setup a vanilla Vite 7.x.x + Tailwindcss 4.x.4 project, ready to use.
+Ready To Go Vite-Tailwindcss is a bash script to quickly setup a vanilla Vite 7.x.x + Tailwindcss 4.x.x project, ready to use.
 
 ## How
 Simply run the script wherever you want to create your project.
