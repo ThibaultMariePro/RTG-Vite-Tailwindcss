@@ -42,7 +42,6 @@ You'll end up with a vanilla Vite 7 project, configured with Tailwindcss 4.
 ## TODOs
 - [x] User choice to autoremove script
 - [x] Parse user input to avoid characters that npm hates
-- [ ] Add guard clauses if needed
-- [ ] Make the npm loading visible (user may freak out because it can resemble to script freeze)
 - [ ] Control/lock/make choose both Vite and Tailwindcss versions (for now it's just what's nowadays.. currently Vite 7 and Tailwindcss 4)
-- [ ] Check if there's anything more to clean (like in `index.html`)
+- [ ] Make the npm loading visible (user may freak out because it can resemble to script freeze)
+- [ ] Remove the link rel="icon" for vite.svg in index.html
