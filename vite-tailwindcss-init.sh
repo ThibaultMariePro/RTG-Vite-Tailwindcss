@@ -55,9 +55,24 @@ rm $INPUT/public/vite.svg
 rm $INPUT/src/counter.js
 rm $INPUT/src/javascript.svg
 
-printf '%b\n\b'         "   - Cleaning style.css and main.js.."
+printf '%b\n\b'         "   - Cleaning style.css.."
 echo "@import \"tailwindcss\";" > $INPUT/src/style.css
+printf '%b\n\b'         "   - Cleaning main.js.."
 echo "import './style.css'" > $INPUT/src/main.js
+printf '%b\n\b'         "   - Cleaning index.html.."
+printf '%b' "<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+" > $INPUT/index.html
 
 printf '%b\n\b'         "   - Creating Vite config file.."
 touch $INPUT/vite.config.js
@@ -91,7 +106,7 @@ case $DELETE in
     printf '%b\n\b'     "$GREEN$BOLD ═══════════════════════════════ $ENDTAG";
   ;;
   * )
-    printf '%b\n\b' "ok, we leave it there then."
+    printf '%b\n\b' " Ok, we leave it there then."
   ;;
 esac
 
