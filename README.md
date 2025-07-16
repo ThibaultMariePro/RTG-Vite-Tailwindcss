@@ -11,7 +11,7 @@ Simply run the script wherever you want to create your project.
 ./vite-tailwindcss-init.sh
 ```
 
-You'll end up with your new project root folder:
+It will then create your new project root folder:
 
 ```bash
 my-project
