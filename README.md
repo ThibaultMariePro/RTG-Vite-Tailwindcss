@@ -11,20 +11,17 @@ Simply run the script wherever you want to create your project.
 ./vite-tailwindcss-init.sh
 ```
 
-You'll end up with your new project root folder
+You'll end up with your new project root folder:
 
 ```bash
-.
-├── my-project
-│   ├── index.html
-│   ├── node_modules
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── public
-│   ├── src
-│   └── vite.config.js
-├── README.md
-└── vite-tailwindcss-init.sh
+my-project
+    ├── index.html
+    ├── node_modules
+    ├── package.json
+    ├── package-lock.json
+    ├── public
+    ├── src
+    └── vite.config.js
 ```
 
 ## Output
