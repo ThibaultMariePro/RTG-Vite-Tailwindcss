@@ -17,19 +17,28 @@ printf '%b'         "\n Project name [my-project]: "
 read INPUT
 if [ $INPUT ] 
 then 
-    INPUT=$INPUT
+    # INPUT=$INPUT
+    if [[ "$INPUT" =~ ^[a-z0-9.-]+$ ]]; then
+      INPUT=$INPUT
+    else
+      printf '%b\n\b'         "$RED$BOLD ═════════ ERROR ═════════$ENDTAG"
+      printf '%b\n\b'         "$RED Invalid input!\n Only lowercase letters, digits, - and . allowed.$ENDTAG"
+      printf '%b\n\b'         "$RED$BOLD ════ ABORTING SCRIPT ════$ENDTAG"
+      #TODO loop
+      exit 1
+    fi
 else 
     INPUT="my-project"
 fi
+
 printf '%b\n\b'     "\n$PURPLE$BOLD Setting up Vite project: $INPUT $ENDTAG";
 
 printf '%b\n'         "   - Creating directory.."
 
 if [ -d "$INPUT" ]; then
-  printf '%b\n\b'         "$RED ═════════ ERROR ═════════"
-  printf '%b\n\b'         " $INPUT already exists!"
-  printf '%b\n\b'         " Please rename your project or remove the old one."
-  printf '%b\n\b'         " ════ ABORTING SCRIPT ════$ENDTAG"
+  printf '%b\n\b'         "$RED$BOLD ═════════ ERROR ═════════$ENDTAG"
+  printf '%b\n\b'         "$RED $INPUT already exists!\n Please rename your project or remove the old one.$ENDTAG"
+  printf '%b\n\b'         "$RED$BOLD ════ ABORTING SCRIPT ════$ENDTAG"
   exit 1
 fi
 
