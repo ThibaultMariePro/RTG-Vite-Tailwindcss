@@ -13,6 +13,20 @@ Simply run the script wherever you want to create your project.
 
 You'll end up with your new project root folder
 
+```bash
+.
+├── my-project
+│   ├── index.html
+│   ├── node_modules
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   ├── src
+│   └── vite.config.js
+├── README.md
+└── vite-tailwindcss-init.sh
+```
+
 ## Output
 You'll end up with a vanilla Vite 7 project, configured with Tailwindcss 4.
 
