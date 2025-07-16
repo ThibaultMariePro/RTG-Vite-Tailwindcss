@@ -21,7 +21,7 @@ You'll end up with a vanilla Vite 7 project, configured with Tailwindcss 4.
 
 > Note: You can add your custom Tailwindcss classes in the `style.css` with the `@theme` directive. See [https://tailwindcss.com/docs/theme].
 
-> Note: There's no need to import the `style.css` file in `index.html` since Vite automatically injects the css via the `main.js`.
+> Note: There's no need to import the `style.css` file in `index.html` since Vite automatically injects the css via the `main.js` file.
 
 ## Documentation
 
