@@ -17,8 +17,7 @@ printf '%b'         "\n Project name [my-project]: "
 read INPUT
 if [ $INPUT ] 
 then 
-    # INPUT=$INPUT
-    if [[ "$INPUT" =~ ^[a-z0-9.-]+$ ]]; then
+    if [[ "$INPUT" =~ ^[a-z0-9.-_]+$ ]]; then
       INPUT=$INPUT
     else
       printf '%b\n\b'         "$RED$BOLD ═════════ ERROR ═════════$ENDTAG"
@@ -75,7 +74,25 @@ export default defineConfig({
 }) " > $INPUT/vite.config.js
 
 
-printf '%b\n\b'     "\n$GREEN$BOLD ═══════════ SUCCESS! ═══════════ $ENDTAG";
-printf '%b\n\b'     " Everything should work, \n Now you can$BLUE$BOLD cd$ENDTAG in $INPUT/ and run$BLUE$BOLD npm run dev $ENDTAG\n";
+printf '%b\n\b'     "$GREEN$BOLD ═══════════ SUCCESS! ═══════════ $ENDTAG";
+printf '%b\n\b'     " Everything should work, \n Now you can$BLUE$BOLD cd$ENDTAG in $BLUE$BOLD$INPUT/$ENDTAG and run$BLUE$BOLD npm run dev $ENDTAG";
+printf '%b\n\b'     "$GREEN$BOLD ═══════════════════════════════ $ENDTAG";
+
+printf '%b'         "$PURPLE$BOLD Do you want to delete this script? (y/N):$ENDTAG ";
+read DELETE
+
+case $DELETE in
+  y|Y|yes|YES )
+    printf '%b\n\b' " Kaboom!"
+    printf '%b\n\b' " deleting $BLUE$BOLD$0$ENDTAG.."
+    rm $0
+    printf '%b\n\b'     "$GREEN$BOLD ═══════════ SUCCESS! ═══════════ $ENDTAG";
+    printf '%b\n\b'     " Script deleted!"
+    printf '%b\n\b'     "$GREEN$BOLD ═══════════════════════════════ $ENDTAG";
+  ;;
+  * )
+    printf '%b\n\b' "ok, we leave it there then."
+  ;;
+esac
 
 exit 0
