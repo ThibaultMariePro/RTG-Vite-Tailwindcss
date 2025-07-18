@@ -24,7 +24,6 @@ then
       printf '%b\n\b'         "$RED$BOLD ═════════ ERROR ═════════$ENDTAG"
       printf '%b\n\b'         "$RED Invalid input!\n Only lowercase letters, digits, - and . allowed.$ENDTAG"
       printf '%b\n\b'         "$RED$BOLD ════ ABORTING SCRIPT ════$ENDTAG"
-      #TODO loop
       exit 1
     fi
 else 
@@ -44,7 +43,6 @@ fi
 
 mkdir $INPUT
 printf '%b\n\b'         "   - Creating Vite project.."
-# npm create vite@latest $INPUT -- --template vanilla --prefix ./$INPUT > /dev/null 2>&1
 
 printf '%b\n\b'     "$YELLOW$BOLD ═════════ npm execution ═════════ $ENDTAG";
 npm create vite@latest $INPUT -- --template vanilla --prefix ./$INPUT 
