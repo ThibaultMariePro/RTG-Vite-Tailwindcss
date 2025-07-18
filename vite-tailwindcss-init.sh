@@ -17,7 +17,7 @@ printf '%b'         "\n Project name [my-project]: "
 read INPUT
 if [ $INPUT ] 
 then 
-    if [[ "$INPUT" =~ ^[a-z0-9.-_]+$ ]]; then
+    if [[ "$INPUT" =~ ^[-._a-z0-9]+$ ]]; then
       INPUT=$INPUT
     else
       printf '%b\n\b'         "$RED$BOLD ═════════ ERROR ═════════$ENDTAG"
