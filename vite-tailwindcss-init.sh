@@ -66,16 +66,17 @@ echo "@import \"tailwindcss\";" > $INPUT/src/style.css
 printf '%b\n\b'         "   - Cleaning main.js.."
 echo "import './style.css'" > $INPUT/src/main.js
 printf '%b\n\b'         "   - Cleaning index.html.."
-printf '%b' "<!doctype html>
-<html lang="en">
+printf '%b' "
+<!DOCTYPE html>
+<html lang=\"en\">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset=\"UTF-8\" />
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id=\"app\"></div>
+    <script type=\"module\" src=\"/src/main.js\"></script>
   </body>
 </html>
 " > $INPUT/index.html
